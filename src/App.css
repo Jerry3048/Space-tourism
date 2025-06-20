@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Barlow-Regular';
+    src:url('./assets/Fonts/Barlow-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'BarlowCondensed';
+    src:url('./assets/Fonts/BarlowCondensed-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Bellefair';
+    src:url('./assets/Fonts/Bellefair-Regular.ttf');
+}
+
+@theme{
+    --font-Barlow:Barlow-Regular, sans-serif;
+    --font-BarlowCondensed:BarlowCondensed, sans-serif;
+    --font-Bellefair:Bellefair, sans-serif;
+    --breakpoint-1lg: 1037px;
+}
+
+@layer base {
+    button{
+        @apply cursor-pointer
+    }
+
+}
