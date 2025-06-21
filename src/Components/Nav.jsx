@@ -1,7 +1,16 @@
 import { useState } from 'react';
+import { useNavigate, useLocation } from "react-router";
+
 
 function Nav() {
   const[menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+  
+
 
   return (
     <nav className= "flex justify-between items-center  text-white lg:ml-[100px] ml-[40px] lg:pt-[60px] pr-10 md:pr-0">
@@ -9,12 +18,43 @@ function Nav() {
           <img src="./assets/shared/logo.svg" alt="Logo" className="w-15 h-15 mt-5 lg:mt-0" />
           <div className='border border-gray-700 w-[90%] hidden lg:block '></div>
         </div>
-        <ul className='absolute  font-BarlowCondensed lg:w-[50%] md:w-[80%] space-x-[15%] sm:space-x-[12%] text-[100%] p-8 pr-10 lg:pr-20 bg-gray-500/20 backdrop-blur-md right-0 z-0 justify-end items-center md:flex hidden'>
-            <li className='hover:underline hover:underline-offset-35 hover:decoration-2 cursor-pointer'><span className='font-bold'>00</span> Home</li>
-            <li className='hover:underline hover:underline-offset-35 hover:decoration-2 cursor-pointer'><span className='font-bold'>01</span> Destination</li>
-            <li className='hover:underline hover:underline-offset-35 hover:decoration-2 cursor-pointer'><span className='font-bold'>02</span> Crew</li>
-            <li className='hover:underline hover:underline-offset-35 hover:decoration-2 cursor-pointer'><span className='font-bold'>03</span> Technology</li>  
-        </ul>
+       <ul className='absolute font-BarlowCondensed lg:w-[50%] md:w-[80%] space-x-[15%] sm:space-x-[12%] text-[100%] p-8 pr-10 lg:pr-20 bg-gray-500/20 backdrop-blur-md right-0 z-0 justify-end items-center md:flex hidden'>
+        <li
+          onClick={() => navigate('/')}
+          className={`cursor-pointer hover:underline hover:underline-offset-35 hover:decoration-3 hover:decoration-gray-500 ${
+            isActive('/') ? 'underline underline-offset-35 decoration-3' : ''
+          }`}
+        >
+          <span className='font-bold'>00</span> Home
+        </li>
+
+        <li
+          onClick={() => navigate('/destination')}
+          className={`cursor-pointer hover:underline hover:underline-offset-35 hover:decoration-3 hover:decoration-gray-500 ${
+            isActive('/destination') ? 'underline underline-offset-35 decoration-3' : ''
+          }`}
+        >
+          <span className='font-bold'>01</span> Destination
+        </li>
+
+        <li
+          onClick={() => navigate('/crew')}
+          className={`cursor-pointer hover:underline hover:underline-offset-35 hover:decoration-3 hover:decoration-gray-500 ${
+            isActive('/crew') ? 'underline underline-offset-35 decoration-3' : ''
+          }`}
+        >
+          <span className='font-bold'>02</span> Crew
+        </li>
+
+        <li
+          onClick={() => navigate('/technology')}
+          className={`cursor-pointer hover:underline hover:underline-offset-35 hover:decoration-3 hover:decoration-gray-500 ${
+            isActive('/technology') ? 'underline underline-offset-35 decoration-3' : ''
+          }`}
+        >
+          <span className='font-bold'>03</span> Technology
+        </li>
+      </ul>
 
         <img 
         src="./assets/shared/icon-hamburger.svg" 
@@ -31,10 +71,10 @@ function Nav() {
             onClick={() => setMenuOpen(false)}
           />
           <ul className="text-white space-y-8 text-left w-full font-BarlowCondensed">
-            <li><span className='font-bold'>00</span> Home</li>
-            <li><span className='font-bold'>01</span> Destination</li>
-            <li><span className='font-bold'>02</span> Crew</li>
-            <li><span className='font-bold'>03</span> Technology</li>
+            <li onClick={() => { setMenuOpen(false); navigate('/') }}><span className='font-bold'>00</span> Home</li>
+            <li onClick={() => { setMenuOpen(false); navigate('/destination') }}><span className='font-bold'>01</span> Destination</li>
+            <li onClick={() => { setMenuOpen(false); navigate('/crew') }}><span className='font-bold'>02</span> Crew</li>
+            <li onClick={() => { setMenuOpen(false); navigate('/technology') }}><span className='font-bold'>03</span> Technology</li>
           </ul>
         </div>
       )}

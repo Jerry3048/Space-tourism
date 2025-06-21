@@ -1,5 +1,10 @@
 import Nav from '../Components/Nav';
+import { useNavigate } from 'react-router';
+
+
 function Home() {
+   const navigate = useNavigate();
+
   return (
     <div className='lg:bg-[url("./assets/home/background-home-desktop.jpg")] sm:bg-[url("./assets/home/background-home-tablet.jpg")] bg-[url("./assets/home/background-home-mobile.jpg")] bg-cover min-h-screen w-full'>
       <Nav />
@@ -15,7 +20,7 @@ function Home() {
                <>Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!</> 
             </div>
         </div>
-       <button className="relative flex items-center justify-center group  w-60 h-60 mx-auto lg:m-0">
+       <button onClick={() => navigate('/destination')} className="relative flex items-center justify-center group  w-60 h-60 mx-auto lg:m-0">
         <div className="absolute inset-0 bg-white group rounded-full  "></div>
          <div className="absolute inset-0 bg-white/30 z-0 hover:z-1 group-hover:scale-170 group-hover:bg-white/30 rounded-full transition-transform duration-300 "></div>
            <div className="relative z-0 text-[32px] text-black uppercasefont-Bellefair ">Explore</div>
