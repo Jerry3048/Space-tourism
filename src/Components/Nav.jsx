@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from "react-router";
+import Logo from '../assets/shared/logo.svg'
 
 
 function Nav() {
@@ -15,7 +16,7 @@ function Nav() {
   return (
     <nav className= "flex justify-between items-center  text-white lg:ml-[100px] ml-[40px] lg:pt-[60px] pr-10 md:pr-0">
         <div className='flex items-center justify-between space-x-10 z-10 relative xl:w-[50%] w-[47%]'>
-          <img src="/src/assets/shared/logo.svg" alt="Logo" className="w-15 h-15 mt-5 lg:mt-0" />
+          <img src={Logo} alt="Logo" className="w-15 h-15 mt-5 lg:mt-0" />
           <div className='border border-gray-700 w-[90%] hidden lg:block '></div>
         </div>
        <ul className='absolute font-BarlowCondensed lg:w-[50%] md:w-[80%] space-x-[15%] sm:space-x-[12%] text-[100%] p-8 pr-10 lg:pr-20 bg-gray-500/20 backdrop-blur-md right-0 z-0 justify-end items-center md:flex hidden'>
