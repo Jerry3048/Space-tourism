@@ -1,11 +1,15 @@
 import Nav from "../Components/Nav"
 import {useState} from "react"
+import img1 from  "../assets/crew/image-douglas-hurley.png"
+import img2 from  "../assets/crew/image-mark-shuttleworth.png"
+import img3 from  "../assets/crew/image-victor-glover.png"
+import img4 from  "../assets/crew/image-anousheh-ansari.png"
 
 const tabs = [
-    { name: "DOUGLAS HURLEY", image: "src/assets/crew/image-douglas-hurley.png", role: "COMMANDER", description: "Douglas Gerald Hurley is a United States Marine Corps officer and a NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2." },
-    { name: "MARK SHUTTLEWORTH", image: "src/assets/crew/image-mark-shuttleworth.png", role: "MISSION SPECIALIST", description: "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. He became the first South African to travel to space as a space tourist." },
-    { name: "VICTOR GLOVER", image: "src/assets/crew/image-victor-glover.png", role: "PILOT", description: "Victor Jerome Glover is a NASA astronaut of the class of 2013. He is a pilot on the Crew-1 mission to the International Space Station." },
-    { name: "ANOUSHEH ANSARI", image: "src/assets/crew/image-anousheh-ansari.png", role: "FLIGHT ENGINEER", description: "Anousheh Ansari is an Iranian-American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the International Space Station, and the first Iranian in space." }
+    { name: "DOUGLAS HURLEY", image: {img1}, role: "COMMANDER", description: "Douglas Gerald Hurley is a United States Marine Corps officer and a NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2." },
+    { name: "MARK SHUTTLEWORTH", image: {img2}, role: "MISSION SPECIALIST", description: "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. He became the first South African to travel to space as a space tourist." },
+    { name: "VICTOR GLOVER", image: {img3}, role: "PILOT", description: "Victor Jerome Glover is a NASA astronaut of the class of 2013. He is a pilot on the Crew-1 mission to the International Space Station." },
+    { name: "ANOUSHEH ANSARI", image:{img4}, description: "Anousheh Ansari is an Iranian-American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the International Space Station, and the first Iranian in space." }
 ]
 
 

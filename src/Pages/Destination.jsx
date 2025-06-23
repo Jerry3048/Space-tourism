@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import Nav from '../Components/Nav'
 import MoonImg from '../assets/destination/image-moon.png'
-
+import MarsImg from '../assets/destination/image-mars.png'
+import EuropaIng from  '../assets/destination/image-europa.png'
+import TitanImg from  '../assets/destination/image-titan.png'
 
 const tabs = [
-    { name: 'Moon', description: "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apolo 11 landing sites.", image: 'src/assets/destination/image-moon.png', distance: '384,400 km', travelTime: '3 DAYS' },
+    { name: 'Moon', description: "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apolo 11 landing sites.", image: {MoonImg}, distance: '384,400 km', travelTime: '3 DAYS' },
 
-    { name: 'Mars', description: "Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!", image: 'src/assets/destination/image-mars.png', distance: '225 mil. km', travelTime: '9 MONTHS' },
+    { name: 'Mars', description: "Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!", image: {MarsImg}, distance: '225 mil. km', travelTime: '9 MONTHS' },
 
-    { name: 'Europa',description:"The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover's dream. With an icy surface, it's perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabi", image: '/src/assets/destination/image-europa.png', distance: '628 mil. km', travelTime: '3 YEARS' },
+    { name: 'Europa',description:"The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover's dream. With an icy surface, it's perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabi", image:{EuropaIng}, distance: '628 mil. km', travelTime: '3 YEARS' },
 
-    { name: 'Titan', description:"The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.", image: '/src/assets/destination/image-titan.png', distance: '1.6 bil. km', travelTime: '7 YEARS' }
+    { name: 'Titan', description:"The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.", image: {TitanImg}, distance: '1.6 bil. km', travelTime: '7 YEARS' }
 ]
 
 function Destination() {

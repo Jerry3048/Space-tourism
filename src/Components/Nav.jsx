@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate, useLocation } from "react-router";
 import Logo from '../assets/shared/logo.svg'
+import handburger from "../assets/shared/icon-hamburger.svg"
+import close from "../assets/shared/icon-close.svg"
 
 
 function Nav() {
@@ -58,14 +60,14 @@ function Nav() {
       </ul>
 
         <img 
-        src="src/assets/shared/icon-hamburger.svg" 
+        src={handburger} 
         alt="Menu" 
         className="w-9 h-6 cursor-pointer block sm:hidden"
         onClick={() => setMenuOpen(true)} />
 
         <div className={`fixed top-0 right-0 z-50 flex flex-col items-start w-[70%] md:hidden h-full backdrop-blur-md bg-gray-500/30 p-8  space-y-[30%] transition-transform duration-300 ease-in-out transform ${menuOpen ? 'translate-x-0' : 'translate-x-[100%]'}`}>
           <img
-            src="src/assets/shared/icon-close.svg"
+            src={close}
             alt="Close"
             className="w-8 h-8  cursor-pointer self-end"
             onClick={() => setMenuOpen(false)}
