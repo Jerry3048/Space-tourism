@@ -2,11 +2,11 @@ import Nav from '../Components/Nav';
 import { useState } from 'react';
 
 const tabs = [
-    { name:"1", terminology: 'Launch Vehicle', image: './assets/technology/image-launch-vehicle-portrait.jpg', definition: 'A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth\'s surface to space, usually to Earth orbit or beyond. OurWEB-X carrier rocket is the most powerful in operation.Standing 150 meters tall, it"s quite an awe-inspiring sight on the launch pad!'},
+    { name:"1", terminology: 'Launch Vehicle', image: 'src/assets/technology/image-launch-vehicle-portrait.jpg', definition: 'A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth\'s surface to space, usually to Earth orbit or beyond. OurWEB-X carrier rocket is the most powerful in operation.Standing 150 meters tall, it"s quite an awe-inspiring sight on the launch pad!'},
 
-    { name:"2", terminology: 'Spaceport', image: "./assets/technology/image-spaceport-portrait.jpg", definition: "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth's rotation for launch." },
+    { name:"2", terminology: 'Spaceport', image: "src/assets/technology/image-spaceport-portrait.jpg", definition: "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth's rotation for launch." },
 
-    { name:"3", terminology: 'Space Capsule', image: "./assets/technology/image-space-capsule-portrait.jpg", definition: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained." },
+    { name:"3", terminology: 'Space Capsule', image: "src/assets/technology/image-space-capsule-portrait.jpg", definition: "A space capsule is an often-crewed spacecraft that uses a blunt-body reentry capsule to reenter the Earth's atmosphere without wings. Our capsule is where you'll spend your time during the flight. It includes a space gym, cinema, and plenty of other activities to keep you entertained." },
 ]
 
 
