@@ -1,8 +1,8 @@
 import Nav from '../Components/Nav';
 import { useState } from 'react';
 import img1 from '../assets/technology/image-launch-vehicle-portrait.jpg'
-import img2 from '../assets/technology/image-launch-spaceport-portrait.jpg'
-import img3 from '../assets/technology/image-launch-space-capsule-portrait.jpg'
+import img2 from '../assets/technology/image-spaceport-portrait.jpg'
+import img3 from '../assets/technology/image-space-capsule-portrait.jpg'
 
 
 
