@@ -22,7 +22,7 @@ function Technology() {
 useEffect(() => {
     const interval = setInterval(() => {
       setActiveTab((prevTab) => (prevTab + 1) % tabs.length);
-    }, 5000); 
+    }, 10000); 
 
     return () => clearInterval(interval); 
   }, []);     
