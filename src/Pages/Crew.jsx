@@ -21,7 +21,7 @@ function Crew() {
 useEffect(() => {
     const interval = setInterval(() => {
       setActiveTab((prevTab) => (prevTab + 1) % tabs.length);
-    }, 3000); 
+    }, 5000); 
 
     return () => clearInterval(interval); 
   }, []);   
