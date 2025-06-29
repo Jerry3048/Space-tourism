@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import Nav from '../Components/Nav'
-import MoonImg from '../assets/destination/image-moon.png'
-import MarsImg from '../assets/destination/image-mars.png'
-import EuropaIng from  '../assets/destination/image-europa.png'
-import TitanImg from  '../assets/destination/image-titan.png'
+import { useState, useEffect } from 'react';
+import Nav from '../Components/Nav';
+import MoonImg from '../assets/destination/image-moon.png';
+import MarsImg from '../assets/destination/image-mars.png';
+import EuropaIng from  '../assets/destination/image-europa.png';
+import TitanImg from  '../assets/destination/image-titan.png';
 
 const tabs = [
     { name: 'Moon', description: "See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apolo 11 landing sites.", image: MoonImg, distance: '384,400 km', travelTime: '3 DAYS' },
@@ -18,6 +18,15 @@ const tabs = [
 function Destination() {
   const [activeTab, setActiveTab] = useState(0);
   const tab = tabs[activeTab];
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prevTab) => (prevTab + 1) % tabs.length);
+    }, 3000); 
+
+    return () => clearInterval(interval); 
+  }, []);  
 
 
   return (

@@ -1,5 +1,5 @@
 import Nav from "../Components/Nav"
-import {useState} from "react"
+import { useState, useEffect } from 'react';
 import img1 from  "../assets/crew/image-douglas-hurley.png"
 import img2 from  "../assets/crew/image-mark-shuttleworth.png"
 import img3 from  "../assets/crew/image-victor-glover.png"
@@ -17,6 +17,14 @@ const tabs = [
 function Crew() {
   const [activeTab, setActiveTab] = useState(0);
   const tab = tabs[activeTab];
+
+useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prevTab) => (prevTab + 1) % tabs.length);
+    }, 3000); 
+
+    return () => clearInterval(interval); 
+  }, []);   
 
 
   return (
